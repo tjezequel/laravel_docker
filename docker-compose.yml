@@ -20,6 +20,7 @@ services:
       - DB_USERNAME=laratest
       - DB_PASSWORD=B8e)CA,Gq~Wgzth*DB}@
       - APP_DEBUG=true
+      - APP_KEY=base64:wpZD3euXj9UMBjIOcaOhFgG3pxwmEae92drx7nGnsvg=
 
   mysql:
     restart: always
