@@ -1,0 +1,38 @@
+[
+    {
+        "Name": "laradock_default",
+        "Id": "6440b7d1827d4e62a0e3c9866252f1fe79e6f7368fcf6c7776cd5782262673e9",
+        "Created": "2018-11-23T10:52:03.52365Z",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": null,
+            "Config": [
+                {
+                    "Subnet": "192.168.96.0/20",
+                    "Gateway": "192.168.96.1"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {
+            "e7c1ea7d4f64daa9a762c5ad5b59a1bffbdea7057287b6be5f9866fbebf17c24": {
+                "Name": "lara_php",
+                "EndpointID": "de06c372bfc70b08029a7f360cef6d583a6ec31383e82b1d13797bb48b713cad",
+                "MacAddress": "02:42:c0:a8:60:03",
+                "IPv4Address": "192.168.96.3/20",
+                "IPv6Address": ""
+            }
+        },
+        "Options": {},
+        "Labels": {}
+    }
+]

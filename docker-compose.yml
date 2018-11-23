@@ -1,0 +1,33 @@
+version: "2.0"
+
+services:
+  php: 
+    container_name: lara_php
+    restart: always
+    build: 
+      context: ./.containers/php-fpm/
+      dockerfile: Dockerfile
+    volumes:
+      - ./src:/var/www/html
+      - ./.containers/php-fpm/apache.conf:/etc/apache2/sites-available/000-default.conf
+    ports: 
+      - 10260:80
+    depends_on: 
+      - mysql
+    environment:
+      - DB_DATABASE=laratest
+      - DB_HOST=mysql
+      - DB_USERNAME=laratest
+      - DB_PASSWORD=B8e)CA,Gq~Wgzth*DB}@
+
+  mysql:
+    restart: always
+    container_name: lara_sql
+    image: mysql:5.7
+    volumes: 
+      - /var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=B8e)CA,Gq~Wgzth*DB}@
+      - MYSQL_DATABASE=laratest
+      - MYSQL_USER=laratest
+      - MYSQL_PASSWORD=B8e)CA,Gq~Wgzth*DB}@
